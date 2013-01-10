@@ -2,11 +2,11 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package jvcs.controles;
+package jvcsS.controles;
 
 import java.sql.Connection;
-import jvcs.bancodados.CriaConexaoDB;
-import jvcs.dados.Contato;
+import jvcsS.conexoes.CriaConexaoDB;
+import jvcsS.dados.Contato;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
