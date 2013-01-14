@@ -12,7 +12,7 @@ import jvcsC.conexoes.CriaConexao;
 public class Main {
      public static void main(String[] args){
          CriaConexao novo = new CriaConexao();
-         //bruno teste
+         
          
          
      }

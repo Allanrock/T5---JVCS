@@ -4,10 +4,14 @@
  */
 package jvcsC.conexoes;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -16,22 +20,23 @@ import java.util.logging.Logger;
  * @author Allan
  */
 public class CriaConexao {
-    Socket conexao;
-    
-    public  CriaConexao(){
+
+    public CriaConexao() {
         try {
             
-            this.conexao = new Socket("127.0.0.1",8001);
-            PrintWriter EnviaInstrucao = new PrintWriter(conexao.getOutputStream());
-            EnviaInstrucao.print("Conectei ^^\n");
+            Socket socket = new Socket("127.0.0.1",6969);
+            System.out.println("Cliente ligado!");
+            try (Scanner recebe = new Scanner(socket.getInputStream())) {
+                System.out.println(recebe.nextLine());
+            }
             
+
         } catch (UnknownHostException ex) {
             Logger.getLogger(CriaConexao.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
             Logger.getLogger(CriaConexao.class.getName()).log(Level.SEVERE, null, ex);
         }
-    
-    
-}
-    
+
+
+    }
 }

@@ -21,7 +21,7 @@ public class Main {
      */
     public static void main(String[] args) throws SQLException {
                 
-        DoContato dao = new DoContato();
+        //DoContato dao = new DoContato();
         CriaServer novo = new CriaServer();
         //dao.deleta(contato.getNome());
         
