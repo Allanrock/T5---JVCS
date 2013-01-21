@@ -8,17 +8,29 @@ package jvcsS.dados;
  *
  * @author Allan
  */
-public class Contato {
+public class Cliente {
     
-    private Long id;
+    private int id;
     private String login;
     private String senha;
 
-    public Long getId() {
+    public Cliente(int id, String login, String senha) {
+        this.id = id;
+        this.login = login;
+        this.senha = senha;
+        
+ 
+    }
+
+    public Cliente() {
+        
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
