@@ -20,6 +20,7 @@ public class ConfigurarDB {
    static final String DB_URL = "jdbc:mysql://localhost:3306/" + DB_NAME;
    static final String DB_USER = "root";
    static final String DB_PASSWD = "admin";
+   
 
    public static Connection ConectarComBanco() throws ClassNotFoundException, SQLException {
      Class.forName(JDBC_DRIVER);
